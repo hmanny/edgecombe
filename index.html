@@ -9,12 +9,19 @@
     <link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" />
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/jquery.flexslider.js"></script>
+    <script src="/js/imgLiquid.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
             $('.flexslider').flexslider({
                 animation: "slide",
                 controlsContainer: ".flex-container"
             });
+
+
+        });
+
+        $(document).ready(function() {
+            $(".imgLiquidFill").imgLiquid();
         });
 
     </script>
@@ -24,12 +31,15 @@
 <body>
     <header>
 
+        <div class="topstrip"><img class="mail" src="/mail.png"><span class="email">enquries@edgecombe.co.uk</span><span class="seperate"> | </span>Call Us <span class="light">now on</span> (+44)(0)1179 737635<span class="social"><a href="#"><img src="/twit.png"></a><a href="#"><img src="/in.png"></a></span></div>
+
         <div class="logo"><img src="/logo.png"></div>
 
         <nav class="top-menu">
             <ul class="menu" id="main">
-                <li id="menu0"><a title="Home" href="#">Home</a></li>
+                <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
                 <li id="menu1"><a title="About us" href="#">Consulting</a></li>
+                <li id="menu1"><a title="About us" href="#">Training</a></li>
                 <li id="menu2"><a title="Our process" href="#">360 Feedback</a></li>
                 <li id="menu3"><a title="Our location" href="#">People</a></li>
                 <li id="menu4"><a title="Our history" href="#">Resources</a></li>
@@ -70,6 +80,7 @@
             </ul>
         </div>
     </div>
+
     <div class="text-section">
         <div class="container">
             <div class="grid1"></div>
@@ -83,29 +94,113 @@
         </div>
     </div>
 
-
     <div class="five-boxes">
-        <div class="box">
+        <a href="#" class="box">
             <img src="/mind.png">
             <p>Psychological &amp; Assessment Coaching</p>
-        </div>
-        <div class="box">
+        </a>
+        <a href="#" class="box">
             <img src="/clipboard.png">
             <p>Medical Appraisal &amp; Revaluation</p>
-        </div>
-        <div class="box">
+        </a>
+        <a href="#" class="box">
             <img src="/steth.png">
             <p>Managing Concerns About Doctors &amp; Teams</p>
 
-        </div>
-        <div class="box">
+        </a>
+        <a href="#" class="box">
             <img src="/files.png">
             <p>Support for Educational Supervisors &amp; TPDs</p>
-        </div>
-        <div class="box">
+        </a>
+        <a href="#" class="box">
             <img src="/speaker.png">
             <p>Medical Appraisal &amp; Revaluation</p>
+        </a>
+    </div>
+
+
+    <div class="news">
+
+
+
+        <div id="displayBlogStory">
+            <div class="blogPost">
+                <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
+                    <a href="#"><img src="/recruitment.jpg"></a>
+                </div>
+                <div class="blogTitle"><a href="#">A Masterclass in Consultant Selection</a></div>
+                <div class="blogDate">12.11.15</div>
+                <div class="blogSummaryImage blogSummaryImageBottom">
+                    <a href="#"><img src="#"></a>
+                </div>
+                <div class="blogBody">Five days at Memorial: Life and Death in a Storm Ravaged Hospital by Sheri Fink is the non-fictional account of what happened at this...
+                    <p><a href="#">Read more...</a></p>
+                </div>
+                <div class="blogBodyClear"></div>
+            </div>
+
+
         </div>
+
+
+        <div id="displayBlogStory">
+            <div class="blogPost">
+                <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
+                    <a href="#"><img src="/book-photo-2.png"></a>
+                </div>
+                <div class="blogTitle"><a href="#">Blog TITLE</a></div>
+                <div class="blogDate">12.11.15</div>
+                <div class="blogSummaryImage blogSummaryImageBottom">
+                    <a href="#"><img src="#"></a>
+                </div>
+                <div class="blogBody">Five days at Memorial: Life and Death in a Storm Ravaged Hospital by Sheri Fink is the non-fictional account of what happened at this...
+                    <p><a href="#">Read more...</a></p>
+                </div>
+                <div class="blogBodyClear"></div>
+            </div>
+
+
+        </div>
+
+        <div id="displayBlogStory">
+            <div class="blogPost">
+                <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
+                    <a href="#"><img src="/jkblogreflection.png"></a>
+                </div>
+                <div class="blogTitle"><a href="#">Reflections on 20 years consulting to the medical profession</a></div>
+                <div class="blogDate">12.11.15</div>
+                <div class="blogSummaryImage blogSummaryImageBottom">
+                    <a href="#"><img src="#"></a>
+                </div>
+                <div class="blogBody">Five days at Memorial: Life and Death in a Storm Ravaged Hospital by Sheri Fink is the non-fictional account of what happened at this...
+                    <p><a href="#">Read more...</a></p>
+                </div>
+                <div class="blogBodyClear"></div>
+            </div>
+
+
+        </div>
+        <div id="displayBlogStory">
+            <div class="blogPost">
+                <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
+                    <a href="#"><img src="/football.jpg"></a>
+                </div>
+                <div class="blogTitle"><a href="#">No surprise as the NHS is still a politcal throughout the campaign</a></div>
+                <div class="blogDate">12.11.15</div>
+                <div class="blogSummaryImage blogSummaryImageBottom">
+                    <a href="#"><img src="#"></a>
+                </div>
+                <div class="blogBody"> Five days at Memorial: Life and Death in a Storm Ravaged Hospital by Sheri Fink is the non-fictional account of what happened at this...
+                    <p><a href="#">Read more...</a></p>
+                </div>
+                <div class="blogBodyClear"></div>
+            </div>
+
+
+        </div>
+
+
+
     </div>
 
 

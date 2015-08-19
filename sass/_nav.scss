@@ -12,13 +12,17 @@
         li {
             display: inline-block;
             position: relative;
-            padding: 0 5px;
+            padding: 0 1px;
             a {
                 color: #555;
-                font-family: $regular;
-                font-size: 20px;
+                font-family: $medium;
+                font-size: 18px;
                 text-decoration: none;
                 @include transition (color 0.5s);
+                
+                &.linkActive{
+                    color: $pink;
+                }
                 &:hover {
                     color: $light-teal;
                 }
@@ -39,9 +43,10 @@
             }
             &:after {
                 content: "|";
-                padding-left: 10px;
-                font-size: 24px;
+                padding-left: 4px;
+                font-size: 22px;
                 color: #555;
+                font-family: $medium;
             }
             &:last-child:after {
                 display: none;

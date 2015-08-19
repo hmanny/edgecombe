@@ -13,7 +13,7 @@ body {
         font-family: $regular;
     }
     button {
-        padding: 16px 40px;
+       
         border: none;
         outline: none;
         color: white;
@@ -21,6 +21,7 @@ body {
         @include transition(background 0.3s);
         &:hover {
             cursor: pointer;
+            box-shadow: $shadow;
         }
     }
 }
