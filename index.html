@@ -10,6 +10,11 @@
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/jquery.flexslider.js"></script>
     <script src="/js/imgLiquid.js"></script>
+    <script src="/js/matchheight.js"></script>
+    <script src="/js/twitterfetcher.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="/js/gmap.js"></script>
+
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
             $('.flexslider').flexslider({
@@ -22,9 +27,13 @@
 
         $(document).ready(function() {
             $(".imgLiquidFill").imgLiquid();
+            $(".box").matchHeight()
+            $(".detail-box").matchHeight()
+
         });
 
     </script>
+
     <title></title>
 </head>
 
@@ -106,7 +115,6 @@
         <a href="#" class="box">
             <img src="/steth.png">
             <p>Managing Concerns About Doctors &amp; Teams</p>
-
         </a>
         <a href="#" class="box">
             <img src="/files.png">
@@ -198,13 +206,75 @@
 
 
         </div>
+    </div>
 
+    <div class="training">
+        <div class="bluewrap"></div>
+        <div class="container">
+            <h1>Our <strong>Training</strong> Services</h1>
 
+            <ul>
+                <li>Managing Concerns Workshop</li>
+                <li>Apparaiser and Appraisee Training</li>
+                <li>Consultant Selection Workshops</li>
+                <li>Training for Educational Supervisors</li>
+                <li>TDP Development Programme</li>
+                <li>eLearning: Edgecumbe Health Online</li>
+            </ul>
+            <button>View Training Services</button>
+        </div>
 
     </div>
 
-
+    <div class="details">
+        <div class="twitter detail-box">
+            <h1><img src="/twitterblue.png">Latest Tweets</h1>
+            <div id="twitterBox"></div>
+        </div>
+        <div class="contact detail-box">
+            <h1><img src="/contact.png"> Contact Us</h1>
+            <ul>
+                <li>Edgecombe Group Limited</li>
+                <li>Somerset House</li>
+                <li>Canynge Road</li>
+                <li>Clifton</li>
+                <li>Bristol</li>
+                <li>BS8 3JX</li>
+            </ul>
+            <ul>
+                <li>Tel: +44 (0) 117 973 7635</li>
+                <li>Fax: +44 (0) 117 973 7680</li>
+                <li>Email: enquiries@edgecumbe.co.uk</li>
+                <li><a href=""><img src="/linkedin.png"></a><a href=""><img src="twitter.png"></a></li>            
+            </ul>
+        </div>
+        <div class="map detail-box">
+            <div class="acf-map">
+                <div class="marker" data-lat="51.4559654" data-lng="-2.621529799999962"></div>
+            </div>
+        </div>
+    </div>
+    <div class="rainbow"></div>
     <footer>
+        <div class="logo"><img src="/logo.png"></div>
+
+        <nav class="footer-menu">
+            <ul class="menu" id="main">
+                <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
+                <li id="menu1"><a title="About us" href="#">Consulting</a></li>
+                <li id="menu1"><a title="About us" href="#">Training</a></li>
+                <li id="menu2"><a title="Our process" href="#">360 Feedback</a></li>
+                <li id="menu3"><a title="Our location" href="#">People</a></li>
+                <li id="menu4"><a title="Our history" href="#">Resources</a></li>
+                <li id="menu5"><a title="Contact" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="terms"><a href="#" >Terms and Conditions</a></div>
+        <div class="copyright">&copy; Edgecumbe Health 2015 | Website Designed by The Smarter Web Company</div>
+        
+        
+        
         <nav class="mobile-menu">
             <ul class="menu" id="main">
                 <li id="menu0"><a title="Home" href="#">Home</a></li>
@@ -223,7 +293,6 @@
         </nav>
         <button class="menu_button"></button>
 
-        Web Design by The Smarter Web Company
     </footer>
 
     <script src="/js/mobile-menu.js"></script>

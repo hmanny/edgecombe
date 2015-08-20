@@ -3,7 +3,7 @@
     @include breakpoint($lg) {
         display: inline-block;
         vertical-align: middle;
-        width: 45%;
+        width: 54%;
     }
     ul {
         display: block;
@@ -16,7 +16,10 @@
             a {
                 color: #555;
                 font-family: $medium;
-                font-size: 18px;
+                font-size: 15px;
+                @include breakpoint($xlg) {
+                    font-size: 17px;
+                }
                 text-decoration: none;
                 @include transition (color 0.5s);
                 
@@ -54,6 +57,11 @@
         }
     }
 }
+
+
+.footer-menu {
+    @extend .top-menu;
+}
 .mobile-menu {
     display: none;
     width: 100%;
@@ -70,15 +78,17 @@
     @include breakpoint($lg) {
         display: none;
     }
-    z-index: 11;
+    z-index: 100;
     position: fixed;
     top: 10px;
     right: 10px;
-    font-size: 40px;
+    font-size: 50px;
     color: $black;
     background: none;
     border: none;
     outline: none;
+    box-shadow: none!important;
+    color: $orange;
     &:before {
         font-family: 'icomoon';
         content: "\e600";
@@ -86,5 +96,6 @@
     &.is-open:before {
         font-family: 'icomoon';
         content: "\e601";
+        color: $teal; 
     }
 }

@@ -24,4 +24,11 @@ body {
             box-shadow: $shadow;
         }
     }
+    
+    .rainbow {
+        background: url(/rainbow.jpg);
+        background-size: cover;
+        height: 7px;
+        width: 100%;
+    }
 }
