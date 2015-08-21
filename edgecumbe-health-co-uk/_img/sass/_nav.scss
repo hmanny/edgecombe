@@ -1,0 +1,165 @@
+.top-menu {
+    display: none;
+    @include breakpoint($lg) {
+        display: inline-block;
+        vertical-align: middle;
+        width: 55%;
+    }
+    ul {
+        display: block;
+        width: 100%;
+        text-align: center;
+        li {
+            display: inline-block;
+            position: relative;
+            padding: 0 1px;
+            a {
+                color: #555;
+                font-family: $medium;
+                font-size: 15px;
+                @include breakpoint($xlg) {
+                    font-size: 17px;
+                }
+                text-decoration: none;
+                @include transition (color 0.5s);
+                &.linkActive {
+                    color: $pink;
+                }
+                &:hover {
+                    color: $light-teal;
+                }
+            }
+            ul {
+                display: none;
+            }
+            &:hover ul {
+                position: absolute;
+                display: block;
+                width: 300%;
+                @include transform(translateX(-33%));
+                li {
+                    display: block;
+                    border-bottom: 1px solid $light-teal;
+                    background: transparent;
+                    &:first-child {
+                        padding-top: 5px;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                    a {
+                        font-size: 13px;
+                        color: $white;
+                        display: block;
+                        padding: 10px 4px;
+                        background: $blue;
+                        &:hover {
+                            color: $blue;
+                            background: $white;
+                        }
+                    }
+                }
+            }
+            &:after {
+                content: "|";
+                padding-left: 4px;
+                font-size: 22px;
+                color: #555;
+                font-family: $medium;
+            }
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+}
+.footer-menu {
+    @extend .top-menu;
+    ul li ul {
+        bottom: 20px;
+    }
+}
+.mobile-menu {
+    
+    .buttonwrap {
+        padding: 15px 0 0 20px;
+        button {
+            background: $pink;
+            padding: 10px 26px;
+        }
+    }
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: $blue;
+    z-index: 100;
+    ul {
+    
+            position: absolute;
+            @include transform(translateY(-50%));
+            top: 50%;
+
+        width: 100%;
+        left: 0;
+        display: block;
+        text-align: center;
+        
+        li {
+            padding: 10px 0;
+            a {
+                font-family: $medium;
+                text-decoration: none;
+                color: white;
+            }
+            ul {
+                background: $blue;
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                @include transform(translateY(0));
+            }
+        }
+    }
+}
+.menu_button {
+    @include breakpoint($lg) {
+        display: none;
+    }
+    @include breakpoint($sm) {
+        font-size: 50px;
+    }
+    @include breakpoint($md) {
+        font-size: 60px;
+    }
+    z-index: 100;
+    position: fixed;
+    top: 6px;
+    right: 6px;
+    font-size: 40px;
+    color: $black;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none!important;
+    color: $orange;
+    &:before {
+        font-family: 'icomoon';
+        content: "\e600";
+    }
+    &.is-open:before {
+        font-family: 'icomoon';
+        content: "\e601";
+        color: $teal;
+    }
+    &.level2:before {
+        content: "\e602";
+        color: $orange
+    }
+}

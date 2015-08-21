@@ -1,0 +1,35 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    
+    overflow-x: hidden;
+    p {
+        font-family: $regular;
+    }
+    button {       
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 16px;
+        @include transition(background 0.3s);
+        &:hover {
+            cursor: pointer;
+            box-shadow: $shadow;
+        }
+    }
+    
+    .rainbow {
+        background: url(/edgecumbe-health-co-uk/_img/rainbow.jpg);
+        background-size: cover;
+        height: 7px;
+        width: 100%;
+    }
+}

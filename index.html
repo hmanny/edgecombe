@@ -5,49 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
-    <link href="/stylesheets/flexslider.css" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" />
-    <script src="/js/jquery-1.11.3.min.js"></script>
-    <script src="/js/jquery.flexslider.js"></script>
-    <script src="/js/imgLiquid.js"></script>
-    <script src="/js/matchheight.js"></script>
-    <script src="/js/twitterfetcher.js"></script>
+    <link href="/edgecumbe-health-co-uk/_img/stylesheets/flexslider.css" rel="stylesheet" type="text/css" />
+    <link href="/edgecumbe-health-co-uk/_img/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    <script src="/edgecumbe-health-co-uk/_img/js/jquery-1.11.3.min.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/jquery.flexslider-min.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/imgLiquid.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/matchheight.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/twitterfetcher.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script src="/js/gmap.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/gmap.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/mobile-menu.js"></script>
 
-    <script type="text/javascript" charset="utf-8">
+
+      <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
             $('.flexslider').flexslider({
                 animation: "slide",
                 controlsContainer: ".flex-container"
             });
-
-
         });
-
         $(document).ready(function() {
+          	$(".blogSummaryImage").addClass("imgLiquidFill");
             $(".imgLiquidFill").imgLiquid();
             $(".box").matchHeight()
-            $(".detail-box").matchHeight()
+            $(".detail-box").matchHeight();
+          
+          	$(".blogBody").text(function(index, currentText) {
+              	link = $(this).find("p a").last()[0].outerHTML;              
+              	return currentText.substr(0, 120) + '...';               
+			});
+          	$(".blogBody").append("<p>" + link + "</p>");
+          
+          	
+          
+          
+            setPadding();
 
         });
 
-    </script>
+        $(window).resize(function() {
+            setPadding();
+        });
 
+        function setPadding() {
+            hh = $("header").outerHeight();
+            viewportWidth = window.innerWidth;
+            if (viewportWidth < 600) {
+                $(".flex-container").css("paddingTop", hh);
+            } else {
+                $(".flex-container").removeAttr("style");
+            }
+        }
+
+    </script>
+    
+    
+  
+
+
+  
+    
+    
+    
     <title></title>
 </head>
 
 <body>
     <header>
 
-        <div class="topstrip"><img class="mail" src="/mail.png"><span class="email">enquries@edgecombe.co.uk</span><span class="seperate"> | </span>Call Us <span class="light">now on</span> (+44)(0)1179 737635<span class="social"><a href="#"><img src="/twit.png"></a><a href="#"><img src="/in.png"></a></span></div>
+        <div class="topstrip"><img class="mail" src="/edgecumbe-health-co-uk/_img/mail.png"><span class="email">enquries@edgecombe.co.uk</span><span class="seperate"> | </span>Call Us <span class="light">now on</span> (+44)(0)1179 737635<span class="social"><a href="#"><img src="/edgecumbe-health-co-uk/_img/twit.png"></a><a href="#"><img src="/edgecumbe-health-co-uk/_img/in.png"></a></span></div>
 
-        <div class="logo"><img src="/logo.png"></div>
+        <div class="logo"><img src="/edgecumbe-health-co-uk/_img/logo.png"></div>
 
         <nav class="top-menu">
             <ul class="menu" id="main">
                 <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
-                <li id="menu1"><a title="About us" href="#">Consulting</a></li>
+                <li id="menu1"><a title="About us" href="#">Consulting</a>
+                    <ul>
+                        <li><a title="Our team" href="#">Doctors In Diffculty</a></li>
+                        <li><a title="Our process" href="#">Consulatant Selection With Candidate Insight</a></li>
+                        <li><a title="Our location" href="#">Psychological Assesment and Training</a></li>
+                        <li><a title="Our history" href="#">MRQA: Medical Revalidation Quality Assurance</a></li>
+                        <li><a title="Our history" href="#">MRQA: Medical Revalidation Quality Assurance</a></li>
+                        <li><a title="Our history" href="#">Support for Eduactional Supervisors ;&amp; TPDs</a></li>
+                    </ul>
+                </li>
                 <li id="menu1"><a title="About us" href="#">Training</a></li>
                 <li id="menu2"><a title="Our process" href="#">360 Feedback</a></li>
                 <li id="menu3"><a title="Our location" href="#">People</a></li>
@@ -65,7 +107,7 @@
         <div class="flexslider">
             <ul class="slides">
                 <li>
-                    <p><img src="/banner-img.jpg" alt="" /></p>
+                    <p><img src="/edgecumbe-health-co-uk/_img/banner-img.jpg" alt="" /></p>
                     <p class="flex-caption"><strong>Edgecumbe Health</strong> Specialises in Working with the Medical Profession
                         <br>
                         <button>What We Offer</button>
@@ -73,14 +115,14 @@
                     </p>
                 </li>
                 <li>
-                    <p><img src="/banner-img.jpg" alt="" /></p>
+                    <p><img src="/edgecumbe-health-co-uk/_img/banner-img.jpg" alt="" /></p>
                     <p class="flex-caption"><strong>Edgecumbe Health</strong> Specialises in Working with the Medical Profession
                         <br>
                         <button>What We Offer</button>
                     </p>
                 </li>
                 <li>
-                    <p><img src="/banner-img.jpg" alt="" /></p>
+                    <p><img src="/edgecumbe-health-co-uk/_img/banner-img.jpg" alt="" /></p>
                     <p class="flex-caption"><strong>Edgecumbe Health</strong> Specialises in Working with the Medical Profession
                         <br>
                         <button>What We Offer</button>
@@ -94,7 +136,7 @@
         <div class="container">
             <div class="grid1"></div>
             <div class="grid10">
-                <div class="icon-holder"><img src="/cross.png"></div>
+                <div class="icon-holder"><img src="/edgecumbe-health-co-uk/_img/cross.png"></div>
                 <div class="text">
                     <p>With a professional background in acupational psychology we are comitted to bringing about develelopment and sustained performance improvement for individual doctors, clinical teams and senior levels of healthcare management.</p>
                 </div>
@@ -105,23 +147,23 @@
 
     <div class="five-boxes">
         <a href="#" class="box">
-            <img src="/mind.png">
+            <img src="/edgecumbe-health-co-uk/_img/mind.png">
             <p>Psychological &amp; Assessment Coaching</p>
         </a>
         <a href="#" class="box">
-            <img src="/clipboard.png">
+            <img src="/edgecumbe-health-co-uk/_img/clipboard.png">
             <p>Medical Appraisal &amp; Revaluation</p>
         </a>
         <a href="#" class="box">
-            <img src="/steth.png">
+            <img src="/edgecumbe-health-co-uk/_img/steth.png">
             <p>Managing Concerns About Doctors &amp; Teams</p>
         </a>
         <a href="#" class="box">
-            <img src="/files.png">
+            <img src="/edgecumbe-health-co-uk/_img/files.png">
             <p>Support for Educational Supervisors &amp; TPDs</p>
         </a>
         <a href="#" class="box">
-            <img src="/speaker.png">
+            <img src="/edgecumbe-health-co-uk/_img/speaker.png">
             <p>Medical Appraisal &amp; Revaluation</p>
         </a>
     </div>
@@ -134,7 +176,7 @@
         <div id="displayBlogStory">
             <div class="blogPost">
                 <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
-                    <a href="#"><img src="/recruitment.jpg"></a>
+                    <a href="#"><img src="/edgecumbe-health-co-uk/_img/recruitment.jpg"></a>
                 </div>
                 <div class="blogTitle"><a href="#">A Masterclass in Consultant Selection</a></div>
                 <div class="blogDate">12.11.15</div>
@@ -154,7 +196,7 @@
         <div id="displayBlogStory">
             <div class="blogPost">
                 <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
-                    <a href="#"><img src="/book-photo-2.png"></a>
+                    <a href="#"><img src="/edgecumbe-health-co-uk/_img/book-photo-2.png"></a>
                 </div>
                 <div class="blogTitle"><a href="#">Blog TITLE</a></div>
                 <div class="blogDate">12.11.15</div>
@@ -173,7 +215,7 @@
         <div id="displayBlogStory">
             <div class="blogPost">
                 <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
-                    <a href="#"><img src="/jkblogreflection.png"></a>
+                    <a href="#"><img src="/edgecumbe-health-co-uk/_img/jkblogreflection.png"></a>
                 </div>
                 <div class="blogTitle"><a href="#">Reflections on 20 years consulting to the medical profession</a></div>
                 <div class="blogDate">12.11.15</div>
@@ -191,7 +233,7 @@
         <div id="displayBlogStory">
             <div class="blogPost">
                 <div class="blogSummaryImage blogSummaryImageTop imgLiquidFill">
-                    <a href="#"><img src="/football.jpg"></a>
+                    <a href="#"><img src="/edgecumbe-health-co-uk/_img/football.jpg"></a>
                 </div>
                 <div class="blogTitle"><a href="#">No surprise as the NHS is still a politcal throughout the campaign</a></div>
                 <div class="blogDate">12.11.15</div>
@@ -228,11 +270,11 @@
 
     <div class="details">
         <div class="twitter detail-box">
-            <h1><img src="/twitterblue.png">Latest Tweets</h1>
+            <h1><img src="/edgecumbe-health-co-uk/_img/twitterblue.png">Latest Tweets</h1>
             <div id="twitterBox"></div>
         </div>
         <div class="contact detail-box">
-            <h1><img src="/contact.png"> Contact Us</h1>
+            <h1><img src="/edgecumbe-health-co-uk/_img/contact.png"> Contact Us</h1>
             <ul>
                 <li>Edgecombe Group Limited</li>
                 <li>Somerset House</li>
@@ -244,8 +286,11 @@
             <ul>
                 <li>Tel: +44 (0) 117 973 7635</li>
                 <li>Fax: +44 (0) 117 973 7680</li>
-                <li>Email: enquiries@edgecumbe.co.uk</li>
-                <li><a href=""><img src="/linkedin.png"></a><a href=""><img src="twitter.png"></a></li>            
+                <li>enquiries@edgecumbe.co.uk</li>
+                <li>
+                    <a href=""><img src="/edgecumbe-health-co-uk/_img/linkedin.png"></a>
+                    <a href=""><img src="/edgecumbe-health-co-uk/_img/twitter.png"></a>
+                </li>
             </ul>
         </div>
         <div class="map detail-box">
@@ -256,12 +301,52 @@
     </div>
     <div class="rainbow"></div>
     <footer>
-        <div class="logo"><img src="/logo.png"></div>
+        <div class="logo"><img src="/edgecumbe-health-co-uk/_img/logo.png"></div>
 
         <nav class="footer-menu">
+          
             <ul class="menu" id="main">
                 <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
-                <li id="menu1"><a title="About us" href="#">Consulting</a></li>
+                <li id="menu1"><a title="About us" href="#">Consulting</a>
+                    <ul>
+                        <li><a title="Our team" href="#">Doctors In Diffculty</a></li>
+                        <li><a title="Our process" href="#">Consulatant Selection With Candidate Insight</a></li>
+                        <li><a title="Our location" href="#">Psychological Assesment and Training</a></li>
+                        <li><a title="Our history" href="#">MRQA: Medical Revalidation Quality Assurance</a></li>
+                        <li><a title="Our history" href="#">MRQA: Medical Revalidation Quality Assurance</a></li>
+                        <li><a title="Our history" href="#">Support for Eduactional Supervisors ;&amp; TPDs</a></li>
+                    </ul>
+                </li>
+                <li id="menu1"><a title="About us" href="#">Training</a></li>
+                <li id="menu2"><a title="Our process" href="#">360 Feedback</a></li>
+                <li id="menu3"><a title="Our location" href="#">People</a></li>
+                <li id="menu4"><a title="Our history" href="#">Resources</a></li>
+                <li id="menu5"><a title="Contact" href="#">Contact</a></li>
+            </ul>
+     
+        </nav>
+
+        <div class="terms"><a href="#">Terms and Conditions</a></div>
+        <div class="copyright">&copy; Edgecumbe Health 2015 | Website Designed by The Smarter Web Company</div>
+
+        <nav class="mobile-menu">
+            
+            <div class="buttonwrap">
+                <button>Login to EHO</button>
+            </div>
+            
+            <ul class="menu" id="main">
+                <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
+                <li id="menu1"><a title="About us" href="#">Consulting</a>
+                    <ul>
+                        <li><a title="Our team" href="#">Doctors In Diffculty</a></li>
+                        <li><a title="Our process" href="#">Consulatant Selection With Candidate Insight</a></li>
+                        <li><a title="Our location" href="#">Psychological Assesment and Training</a></li>
+                        <li><a title="Our history" href="#">MRQA: Medical Revalidation Quality Assurance</a></li>
+                        <li><a title="Our history" href="#">MRQA: Medical Revalidation Quality Assurance</a></li>
+                        <li><a title="Our history" href="#">Support for Eduactional Supervisors ;&amp; TPDs</a></li>
+                    </ul>
+                </li>
                 <li id="menu1"><a title="About us" href="#">Training</a></li>
                 <li id="menu2"><a title="Our process" href="#">360 Feedback</a></li>
                 <li id="menu3"><a title="Our location" href="#">People</a></li>
@@ -269,33 +354,10 @@
                 <li id="menu5"><a title="Contact" href="#">Contact</a></li>
             </ul>
         </nav>
-        
-        <div class="terms"><a href="#" >Terms and Conditions</a></div>
-        <div class="copyright">&copy; Edgecumbe Health 2015 | Website Designed by The Smarter Web Company</div>
-        
-        
-        
-        <nav class="mobile-menu">
-            <ul class="menu" id="main">
-                <li id="menu0"><a title="Home" href="#">Home</a></li>
-                <li id="menu1" class="nodiv"><a title="About us" href="#">About us</a>
-                    <ul>
-                        <li><a title="Our team" href="#">Our team</a></li>
-                        <li><a title="Our process" href="#">Our process</a></li>
-                        <li><a title="Our location" href="#">Our location</a></li>
-                        <li><a title="Our history" href="#">Our history</a></li>
-                    </ul>
-                </li>
-                <li id="menu2" class="nodiv liLinkActive"><a title="Services" href="#" class="linkActive">Services</a></li>
-                <li id="menu3" class="nodiv"><a title="Gallery" href="#">Gallery</a></li>
-                <li id="menu4" class="nodiv"><a title="Contact" href="#">Contact</a></li>
-            </ul>
-        </nav>
         <button class="menu_button"></button>
 
     </footer>
 
-    <script src="/js/mobile-menu.js"></script>
 
 </body>
 
