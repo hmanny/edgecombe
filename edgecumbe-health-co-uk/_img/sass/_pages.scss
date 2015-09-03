@@ -1,0 +1,86 @@
+.titlebanner {
+    padding: 145px 0 65px;
+    @include breakpoint($lg) {
+        padding: 65px 0;
+    }
+    background-color: $orange;
+    &.bgGreen {
+        background-color: $green;
+    }
+    &.bgBlue {
+        background-color: $blue;
+    }
+    &.bgPink {
+        background-color: $pink;
+    }
+    &.bgTeal {
+        background-color: $teal;
+    }
+    &.bgPurple {
+        background-color: $purple;
+    }
+    h1 {
+        font-size: 40px;
+        @include breakpoint($lg) {
+            font-size: 64px;
+        }
+        font-family: $condensedBold;
+        color: $white;
+        margin-left: 2%;
+        &:after {
+            content: "";
+            display: block;
+            width: 75px;
+            height: 7px;
+            margin-top: 15px;
+            background-color: $white;
+        }
+    }
+}
+.content {
+    padding: 65px 0;
+    background: $light-grey;
+    h1 {
+        font-size: 44px;
+        color: $green;
+        font-family: $condensed;
+        margin-bottom: 24px;
+    }
+    h2 {
+        font-size: 31px;
+        color: $blue;
+        font-family: $condensed;
+        margin-bottom: 16px;
+    }
+    p {
+        color: #333;
+        font-size: 16px;
+        line-height: 1.4;
+        strong {
+            font-family: $bold;
+        }
+    }
+    ul, ol {
+        color: #333;
+        font-family: $regular;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-left: 2%;
+    }
+    ol li {
+        list-style-type: decimal;
+    }
+    
+    a {
+        color: $green;
+        @include transition(color 0.3s);
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+.previewFrame {
+    .flex-container {
+        height: 900px!important;
+    }
+}

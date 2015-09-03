@@ -109,6 +109,10 @@
                 }
             }
         }
+        a {
+            color: $white;
+            text-decoration: none;
+        }
     }
     .flex-container {
         @include breakpoint($md) {
@@ -256,7 +260,7 @@
             &:nth-of-type(1) {
                 background: $pink;
                 @include breakpoint($md) {
-                    width: 33.33%;
+                    width: 50%;
                 }
                 &:hover {
                     background: $teal;
@@ -265,7 +269,7 @@
             &:nth-of-type(2) {
                 background: $orange;
                 @include breakpoint($md) {
-                    width: 33.33%;
+                    width: 50%;
                 }
                 &:hover {
                     background: $purple;
@@ -274,7 +278,7 @@
             &:nth-of-type(3) {
                 background: $green;
                 @include breakpoint($md) {
-                    width: 33.33%;
+                    width: 50%;
                 }
                 &:hover {
                     background: $pink;
@@ -289,18 +293,10 @@
                     background: $orange;
                 }
             }
-            &:nth-of-type(5) {
-                background: $purple;
-                @include breakpoint($md) {
-                    width: 50%;
-                }
-                &:hover {
-                    background: $green;
-                }
-            }
+          
             width: 100%;
             @include breakpoint($lg) {
-                width: 20%!important;
+                width: 25%!important;
             }
         }
     }
@@ -488,7 +484,6 @@
             button {
                 background: transparent;
                 padding: 15px 25px;
-                
                 border: 2px solid $white;
                 margin-top: 30px;
                 font-family: $medium;
@@ -504,12 +499,11 @@
         .detail-box {
             padding: 50px 30px;
             @include breakpoint($xxlg) {
-                    padding: 50px 66px;
-                }
+                padding: 50px 66px;
+            }
             font-size: 16px;
             display: inline-block;
             vertical-align: top;
-      
             @include breakpoint($lg) {
                 width: 33%!important;
             }
@@ -569,7 +563,6 @@
             @include breakpoint($md-lg) {
                 width: 50%;
             }
-            
             ul {
                 text-align: left;
                 display: inline-block;
@@ -592,7 +585,6 @@
                         @include breakpoint($lg) {
                             margin-top: 10px;
                         }
-                        
                     }
                 }
             }
@@ -601,11 +593,10 @@
             position: relative;
             padding: 33%;
             width: 100%;
-            
             @include breakpoint($md) {
                 padding: 20%;
             }
-             @include breakpoint($md-lg) {
+            @include breakpoint($md-lg) {
                 width: 50%;
             }
             @include breakpoint($lg) {

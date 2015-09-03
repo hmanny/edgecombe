@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link href="/edgecumbe-health-co-uk/_img/stylesheets/flexslider.css" rel="stylesheet" type="text/css" />
+    <link href="/edgecumbe-health-co-uk/_img/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    <script src="/edgecumbe-health-co-uk/_img/js/jquery-1.11.3.min.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/jquery.flexslider-min.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/imgLiquid.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/matchheight.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/twitterfetcher.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/gmap.js"></script>
+    <script src="/edgecumbe-health-co-uk/_img/js/mobile-menu.js"></script>
+
+
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlsContainer: ".flex-container"
+            });
+        });
+        $(document).ready(function() {
+            $(".blogSummaryImage").addClass("imgLiquidFill");
+            $(".imgLiquidFill").imgLiquid();
+            $(".box").matchHeight()
+            $(".detail-box").matchHeight();
+
+            $(".blogBody").text(function(index, currentText) {
+                link = $(this).find("p a").last()[0].outerHTML;
+                return currentText.substr(0, 120) + '...';
+            });
+            $(".blogBody").append("<p>" + link + "</p>");
+            
+            $("h1[data-bg]").each(function() {
+                bg_color = $(this).attr("data-bg");
+                console.log("bg_color");
+            });
+            
+
+
+
+
+            setPadding();
+
+        });
+
+        $(window).resize(function() {
+            setPadding();
+        });
+
+        function setPadding() {
+            hh = $("header").outerHeight();
+            viewportWidth = window.innerWidth;
+            if (viewportWidth < 600) {
+                $(".flex-container").css("paddingTop", hh);
+            } else {
+                $(".flex-container").removeAttr("style");
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <title></title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="topstrip"><img class="mail" src="/edgecumbe-health-co-uk/_img/mail.png"><span class="email"><a href="mailto:enquries@edgecombe.co.uk">enquries@edgecombe.co.uk</a></span><span class="seperate"> | </span>Call Us <span class="light">now on</span> (+44)(0)1179 737635<span class="social"><a href="#"><img src="/edgecumbe-health-co-uk/_img/twit.png"></a><a href="#"><img src="/edgecumbe-health-co-uk/_img/in.png"></a></span></div>
+
+        <div class="logo"><img src="/edgecumbe-health-co-uk/_img/logo.png"></div>
+
+        <nav class="top-menu">
+            <ul id="main" class="menu">
+                <li class="nodiv" id="main0"><a href="/" title="Home">Home</a></li>
+                <li id="main1" class="liLinkActive"><a class="linkActive" href="/page/" title="Consulting">Consulting</a>
+                    <ul>
+                        <li><a href="/page/doctors-in-difficulty/" title="Doctors in Difficulty">Doctors in Difficulty</a>
+                        </li>
+                        <li><a href="/page/consultant-selection-with-candidate-insight/" title="Consultant Selection with Candidate Insight">Consultant Selection with Candidate Insight</a>
+                        </li>
+                        <li><a href="/page/psychological-assessment-and-training/" title="Psychological Assessment and Training">Psychological Assessment and Training</a>
+                        </li>
+                        <li><a href="/page/mrqa-medical-revalidation-quality-assurance/" title="MRQA Medical Revalidation Quality Assurance">MRQA Medical Revalidation Quality Assurance</a>
+                        </li>
+                        <li><a href="/page/support-for-medical-supervisors-and-tpds/" title="Support For Medical Supervisors and TPDs">Support For Medical Supervisors and TPDs</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="nodiv" id="main2"><a href="/training/" title="Training">Training</a></li>
+                <li class="nodiv" id="main3"><a href="/360-feedback/" title="360 Feedback">360 Feedback</a></li>
+                <li class="nodiv" id="main4"><a href="/people/" title="People">People</a></li>
+                <li class="nodiv" id="main5"><a href="/resources/" title="Resources">Resources</a></li>
+                <li class="nodiv" id="main6"><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="buttonwrap">
+            <button>Login to EHO</button>
+        </div>
+
+    </header>
+
+
+    <div class="titlebanner">
+        <h1>
+        Training   
+        </h1>
+
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!--DETAILS -->
+    <div class="details">
+        <div class="twitter detail-box">
+            <h1><img src="/edgecumbe-health-co-uk/_img/twitterblue.png">Latest Tweets</h1>
+            <div id="twitterBox"></div>
+        </div>
+        <div class="contact detail-box">
+            <h1><img src="/edgecumbe-health-co-uk/_img/contact.png"> Contact Us</h1>
+            <ul>
+                <li>Edgecombe Group Limited</li>
+                <li>Somerset House</li>
+                <li>Canynge Road</li>
+                <li>Clifton</li>
+                <li>Bristol</li>
+                <li>BS8 3JX</li>
+            </ul>
+            <ul>
+                <li>Tel: +44 (0) 117 973 7635</li>
+                <li>Fax: +44 (0) 117 973 7680</li>
+                <li>enquiries@edgecumbe.co.uk</li>
+                <li>
+                    <a href="#"><img src="/edgecumbe-health-co-uk/_img/linkedin.png" alt="" /></a>
+                    <a href="#"><img src="/edgecumbe-health-co-uk/_img/twitter.png" alt="" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="map detail-box">
+            <div class="acf-map">
+                <div class="marker" data-lat="51.4582171" data-lng="-2.621342"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="rainbow"></div>
+
+
+    <!--HEADER -->
+    <footer>
+        <div class="logo"><img src="/edgecumbe-health-co-uk/_img/logo.png"></div>
+
+        <nav class="footer-menu">
+
+            <ul id="footermenu" class="menu">
+                <li class="nodiv" id="footermenu0"><a href="/" title="Home">Home</a></li>
+                <li id="footermenu1" class="liLinkActive"><a class="linkActive" href="/page/" title="Consulting">Consulting</a>
+                    <ul>
+                        <li><a href="/page/doctors-in-difficulty/" title="Doctors in Difficulty">Doctors in Difficulty</a>
+                        </li>
+                        <li><a href="/page/consultant-selection-with-candidate-insight/" title="Consultant Selection with Candidate Insight">Consultant Selection with Candidate Insight</a>
+                        </li>
+                        <li><a href="/page/psychological-assessment-and-training/" title="Psychological Assessment and Training">Psychological Assessment and Training</a>
+                        </li>
+                        <li><a href="/page/mrqa-medical-revalidation-quality-assurance/" title="MRQA Medical Revalidation Quality Assurance">MRQA Medical Revalidation Quality Assurance</a>
+                        </li>
+                        <li><a href="/page/support-for-medical-supervisors-and-tpds/" title="Support For Medical Supervisors and TPDs">Support For Medical Supervisors and TPDs</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="nodiv" id="footermenu2"><a href="/training/" title="Training">Training</a></li>
+                <li class="nodiv" id="footermenu3"><a href="/360-feedback/" title="360 Feedback">360 Feedback</a></li>
+                <li class="nodiv" id="footermenu4"><a href="/people/" title="People">People</a></li>
+                <li class="nodiv" id="footermenu5"><a href="/resources/" title="Resources">Resources</a></li>
+                <li class="nodiv" id="footermenu6"><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="terms"><a href="#">Terms and Conditions</a></div>
+        <div class="copyright">&copy; Edgecumbe Health 2015 | Website designed by <a href="http://www.smarterwebcompany.co.uk/" title="The Smarter Web Company - Web Design" target="_blank">The Smarter Web Company</a></div>
+
+        <nav class="mobile-menu">
+
+            <div class="buttonwrap">
+                <button>Login to EHO</button>
+            </div>
+
+            <ul id="mobilemenu" class="menu">
+                <li class="nodiv" id="mobilemenu0"><a href="/" title="Home">Home</a></li>
+                <li id="mobilemenu1" class="liLinkActive"><a class="linkActive" href="/page/" title="Consulting">Consulting</a>
+                    <ul>
+                        <li><a href="/page/doctors-in-difficulty/" title="Doctors in Difficulty">Doctors in Difficulty</a>
+                        </li>
+                        <li><a href="/page/consultant-selection-with-candidate-insight/" title="Consultant Selection with Candidate Insight">Consultant Selection with Candidate Insight</a>
+                        </li>
+                        <li><a href="/page/psychological-assessment-and-training/" title="Psychological Assessment and Training">Psychological Assessment and Training</a>
+                        </li>
+                        <li><a href="/page/mrqa-medical-revalidation-quality-assurance/" title="MRQA Medical Revalidation Quality Assurance">MRQA Medical Revalidation Quality Assurance</a>
+                        </li>
+                        <li><a href="/page/support-for-medical-supervisors-and-tpds/" title="Support For Medical Supervisors and TPDs">Support For Medical Supervisors and TPDs</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="nodiv" id="mobilemenu2"><a href="/training/" title="Training">Training</a></li>
+                <li class="nodiv" id="mobilemenu3"><a href="/360-feedback/" title="360 Feedback">360 Feedback</a></li>
+                <li class="nodiv" id="mobilemenu4"><a href="/people/" title="People">People</a></li>
+                <li class="nodiv" id="mobilemenu5"><a href="/resources/" title="Resources">Resources</a></li>
+                <li class="nodiv" id="mobilemenu6"><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+
+        </nav>
+        <button class="menu_button"></button>
+
+    </footer>
+
+
+
+    <!-- END TEMPLATE (12809-485664) BODY -->
+    <!-- START CMS V3 STATS -->
+    <script type="text/javascript">
+        $.get('/_ajax/editirStats.aspx?src=' + Math.random(), {
+            d1: '1',
+            d2: '3561',
+            d3: '485664'
+        }, function(data) {});
+
+    </script>
+    <!-- END CMS V3 STATS -->
+
+
+</body>
+
+</html>
