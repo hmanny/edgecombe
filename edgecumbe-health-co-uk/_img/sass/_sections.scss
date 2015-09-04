@@ -124,8 +124,31 @@
         }
         .flexslider {
             border: none;
-            .slides img {
-                width: 100%;
+            .slides {
+                img {
+                    width: 100%;
+                }
+                li {
+                    position: relative;
+                    height: 400px;
+                    @include breakpoint($lg) {
+                        height: 700px;
+                    }
+                    .flex-caption {
+                        z-index: 2;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: #002a18;
+                        opacity: 0.63;
+                        z-index: 0;
+                    }
+                }
             }
         }
         .flex-direction-nav li a {
@@ -293,7 +316,6 @@
                     background: $orange;
                 }
             }
-          
             width: 100%;
             @include breakpoint($lg) {
                 width: 25%!important;
@@ -520,6 +542,7 @@
         }
         .twitter {
             color: #333;
+            background: $light-grey;
             #twitterBox {
                 font-family: $regular;
                 font-size: 14px;

@@ -23,7 +23,7 @@ $width: ($column-width * $columns) + ($gutter * ($columns - 1));
     $gutter-percentage: ($gutter / $width) * 96%;
     .grid#{$i} {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 26px;
         @include breakpoint($lg) {
             width: $grid;
             display: inline-block;
