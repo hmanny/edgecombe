@@ -136,6 +136,37 @@
         }
     }
 }
+form {
+    padding: 30px 0;
+    max-width: 800px;
+    label {
+        font-family: "RobotoRegular";
+        color: rgb(51, 51, 51);
+        padding: 16px 0px;
+        display: inline-block;
+        width: 100%;
+        @include breakpoint($lg) {
+            width: 50%;
+        }
+    }
+    input {
+        width: 100%;
+        @include breakpoint($lg) {
+            width: 49%;
+        }
+    }
+    .fbElementButton {
+        @extend button;
+        width: 240px;
+        margin-top: 30px;
+        @include breakpoint($lg) {
+            float: right;
+        }
+    }
+    &.paypal {
+        width: 325px;
+    }
+}
 .previewFrame {
     .flex-container {
         height: 900px!important;

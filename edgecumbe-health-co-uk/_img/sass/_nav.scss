@@ -41,6 +41,9 @@
                     display: block;
                     border-bottom: 1px solid $light-teal;
                     background: transparent;
+                    width: 220px;
+                    margin: 0 auto;
+                    left: -2%;
                     &:first-child {
                         padding-top: 5px;
                     }
@@ -117,9 +120,9 @@
         white-space: nowrap;
         li {
             padding: 16px;
-            border-bottom: 1px solid $pink;
+            border-bottom: 1px solid $orange;
             &:first-child {
-                border-top: 1px solid $pink;
+                border-top: 1px solid $orange;
             }
             &.login {
                 background: $pink;
@@ -131,7 +134,7 @@
                 color: white;
             }
             .innerMenu {
-                visibility: hidden;              
+                visibility: hidden;
                 opacity: 0;
                 background: $blue;
                 ul {
@@ -142,7 +145,7 @@
                     bottom: 0;
                     top: 0;
                     right: 0;
-                    visibility: visible;           
+                    visibility: visible;
                     opacity: 1;
                 }
                 position: fixed;
@@ -152,7 +155,7 @@
         }
     }
 }
-.menu_button {
+.site .menu_button {
     @include breakpoint($lg) {
         display: none;
     }

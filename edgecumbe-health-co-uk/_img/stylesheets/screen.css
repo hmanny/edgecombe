@@ -362,7 +362,7 @@ html {
   font-family: "RobotoRegular", sans-serif;
 }
 /* line 17, ../sass/_general.scss */
-.site button, .site .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .site a:last-of-type {
+.site button, .site .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .site a:last-of-type, .site form .fbElementButton, form .site .fbElementButton {
   border: none;
   outline: none;
   color: white;
@@ -372,7 +372,7 @@ html {
   transition: background 0.3s;
 }
 /* line 23, ../sass/_general.scss */
-.site button:hover, .site .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .site a:hover:last-of-type {
+.site button:hover, .site .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .site a:hover:last-of-type, .site form .fbElementButton:hover, form .site .fbElementButton:hover {
   cursor: pointer;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.7);
 }
@@ -452,20 +452,23 @@ html {
   display: block;
   border-bottom: 1px solid #259474;
   background: transparent;
+  width: 220px;
+  margin: 0 auto;
+  left: -2%;
 }
-/* line 44, ../sass/_nav.scss */
+/* line 47, ../sass/_nav.scss */
 .top-menu ul li:hover ul li:first-child, .footer-menu ul li:hover ul li:first-child {
   padding-top: 5px;
 }
-/* line 47, ../sass/_nav.scss */
+/* line 50, ../sass/_nav.scss */
 .top-menu ul li:hover ul li:last-child, .footer-menu ul li:hover ul li:last-child {
   border-bottom: none;
 }
-/* line 50, ../sass/_nav.scss */
+/* line 53, ../sass/_nav.scss */
 .top-menu ul li:hover ul li:after, .footer-menu ul li:hover ul li:after {
   display: none;
 }
-/* line 53, ../sass/_nav.scss */
+/* line 56, ../sass/_nav.scss */
 .top-menu ul li:hover ul li a, .footer-menu ul li:hover ul li a {
   font-size: 13px;
   color: #fff;
@@ -473,12 +476,12 @@ html {
   padding: 10px 4px;
   background: #00365c;
 }
-/* line 59, ../sass/_nav.scss */
+/* line 62, ../sass/_nav.scss */
 .top-menu ul li:hover ul li a:hover, .footer-menu ul li:hover ul li a:hover {
   color: #00365c;
   background: #fff;
 }
-/* line 66, ../sass/_nav.scss */
+/* line 69, ../sass/_nav.scss */
 .top-menu ul li:after, .footer-menu ul li:after {
   content: "|";
   padding-left: 4px;
@@ -486,17 +489,17 @@ html {
   color: #555;
   font-family: "RobotoMedium", sans-serif;
 }
-/* line 73, ../sass/_nav.scss */
+/* line 76, ../sass/_nav.scss */
 .top-menu ul li:last-child:after, .footer-menu ul li:last-child:after {
   display: none;
 }
 
-/* line 81, ../sass/_nav.scss */
+/* line 84, ../sass/_nav.scss */
 .footer-menu ul li ul {
   bottom: 20px;
 }
 
-/* line 85, ../sass/_nav.scss */
+/* line 88, ../sass/_nav.scss */
 .mobile-menu {
   opacity: 0;
   left: 175%;
@@ -511,23 +514,23 @@ html {
   background-color: rgba(0, 54, 92, 0.93);
   z-index: 100;
 }
-/* line 86, ../sass/_nav.scss */
+/* line 89, ../sass/_nav.scss */
 .mobile-menu .buttonwrap {
   padding: 15px 0 0 20px;
 }
-/* line 88, ../sass/_nav.scss */
-.mobile-menu .buttonwrap button, .mobile-menu .buttonwrap .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .mobile-menu .buttonwrap a:last-of-type {
+/* line 91, ../sass/_nav.scss */
+.mobile-menu .buttonwrap button, .mobile-menu .buttonwrap .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .mobile-menu .buttonwrap a:last-of-type, .mobile-menu .buttonwrap form .fbElementButton, form .mobile-menu .buttonwrap .fbElementButton {
   background: #b32a57;
   padding: 10px 26px;
   white-space: nowrap;
 }
-/* line 97, ../sass/_nav.scss */
+/* line 100, ../sass/_nav.scss */
 .mobile-menu.showMenu {
   left: 25%;
   display: block;
   opacity: 1;
 }
-/* line 109, ../sass/_nav.scss */
+/* line 112, ../sass/_nav.scss */
 .mobile-menu ul {
   position: absolute;
   -webkit-transform: translateY(-50%);
@@ -542,27 +545,27 @@ html {
   text-align: left;
   white-space: nowrap;
 }
-/* line 118, ../sass/_nav.scss */
+/* line 121, ../sass/_nav.scss */
 .mobile-menu ul li {
   padding: 16px;
-  border-bottom: 1px solid #b32a57;
-}
-/* line 121, ../sass/_nav.scss */
-.mobile-menu ul li:first-child {
-  border-top: 1px solid #b32a57;
+  border-bottom: 1px solid #d36c24;
 }
 /* line 124, ../sass/_nav.scss */
+.mobile-menu ul li:first-child {
+  border-top: 1px solid #d36c24;
+}
+/* line 127, ../sass/_nav.scss */
 .mobile-menu ul li.login {
   background: #b32a57;
   color: #fff;
 }
-/* line 128, ../sass/_nav.scss */
+/* line 131, ../sass/_nav.scss */
 .mobile-menu ul li a {
   font-family: "RobotoMedium", sans-serif;
   text-decoration: none;
   color: white;
 }
-/* line 133, ../sass/_nav.scss */
+/* line 136, ../sass/_nav.scss */
 .mobile-menu ul li .innerMenu {
   visibility: hidden;
   opacity: 0;
@@ -577,11 +580,11 @@ html {
   -moz-transition: opacity 1s;
   transition: opacity 1s;
 }
-/* line 137, ../sass/_nav.scss */
+/* line 140, ../sass/_nav.scss */
 .mobile-menu ul li .innerMenu ul {
   white-space: normal;
 }
-/* line 140, ../sass/_nav.scss */
+/* line 143, ../sass/_nav.scss */
 .mobile-menu ul li .innerMenu.showMenu {
   left: 0;
   bottom: 0;
@@ -591,8 +594,8 @@ html {
   opacity: 1;
 }
 
-/* line 155, ../sass/_nav.scss */
-.menu_button {
+/* line 158, ../sass/_nav.scss */
+.site .menu_button {
   z-index: 100;
   position: fixed;
   top: 6px;
@@ -606,36 +609,36 @@ html {
   color: #d36c24;
 }
 @media (min-width: 1025px) {
-  /* line 155, ../sass/_nav.scss */
-  .menu_button {
+  /* line 158, ../sass/_nav.scss */
+  .site .menu_button {
     display: none;
   }
 }
 @media (min-width: 400px) {
-  /* line 155, ../sass/_nav.scss */
-  .menu_button {
+  /* line 158, ../sass/_nav.scss */
+  .site .menu_button {
     font-size: 50px;
   }
 }
 @media (min-width: 600px) {
-  /* line 155, ../sass/_nav.scss */
-  .menu_button {
+  /* line 158, ../sass/_nav.scss */
+  .site .menu_button {
     font-size: 60px;
   }
 }
-/* line 176, ../sass/_nav.scss */
-.menu_button:before {
+/* line 179, ../sass/_nav.scss */
+.site .menu_button:before {
   font-family: 'icomoon';
   content: "\e600";
 }
-/* line 180, ../sass/_nav.scss */
-.menu_button.is-open:before {
+/* line 183, ../sass/_nav.scss */
+.site .menu_button.is-open:before {
   font-family: 'icomoon';
   content: "\e601";
   color: #127a5c;
 }
-/* line 185, ../sass/_nav.scss */
-.menu_button.level2:before {
+/* line 188, ../sass/_nav.scss */
+.site .menu_button.level2:before {
   content: "\e602";
   color: #d36c24;
 }
@@ -784,7 +787,7 @@ header .buttonwrap {
   }
 }
 /* line 94, ../sass/_sections.scss */
-header .buttonwrap button, header .buttonwrap .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody header .buttonwrap a:last-of-type {
+header .buttonwrap button, header .buttonwrap .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody header .buttonwrap a:last-of-type, header .buttonwrap form .fbElementButton, form header .buttonwrap .fbElementButton {
   text-align: center;
   position: absolute;
   right: 0;
@@ -801,12 +804,12 @@ header .buttonwrap button, header .buttonwrap .news #displayBlogStory .blogPost 
 }
 @media (min-width: 1200px) {
   /* line 94, ../sass/_sections.scss */
-  header .buttonwrap button, header .buttonwrap .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody header .buttonwrap a:last-of-type {
+  header .buttonwrap button, header .buttonwrap .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody header .buttonwrap a:last-of-type, header .buttonwrap form .fbElementButton, form header .buttonwrap .fbElementButton {
     font-size: 20px;
   }
 }
 /* line 107, ../sass/_sections.scss */
-header .buttonwrap button:hover, header .buttonwrap .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody header .buttonwrap a:hover:last-of-type {
+header .buttonwrap button:hover, header .buttonwrap .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody header .buttonwrap a:hover:last-of-type, header .buttonwrap form .fbElementButton:hover, form header .buttonwrap .fbElementButton:hover {
   background: #259474;
 }
 /* line 112, ../sass/_sections.scss */
@@ -953,7 +956,7 @@ header a {
   font-family: "RobotoBoldCondensed", sans-serif;
 }
 /* line 208, ../sass/_sections.scss */
-.flex-container p.flex-caption button, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:last-of-type {
+.flex-container p.flex-caption button, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:last-of-type, .flex-container p.flex-caption form .fbElementButton, form .flex-container p.flex-caption .fbElementButton {
   padding: 13px 20px;
   margin-top: 18px;
   font-size: 17px;
@@ -962,19 +965,19 @@ header a {
 }
 @media (min-width: 1200px) {
   /* line 208, ../sass/_sections.scss */
-  .flex-container p.flex-caption button, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:last-of-type {
+  .flex-container p.flex-caption button, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:last-of-type, .flex-container p.flex-caption form .fbElementButton, form .flex-container p.flex-caption .fbElementButton {
     padding: 28px 70px;
   }
 }
 @media (min-width: 1025px) {
   /* line 208, ../sass/_sections.scss */
-  .flex-container p.flex-caption button, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:last-of-type {
+  .flex-container p.flex-caption button, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:last-of-type, .flex-container p.flex-caption form .fbElementButton, form .flex-container p.flex-caption .fbElementButton {
     margin-top: 45px;
     font-size: 20px;
   }
 }
 /* line 221, ../sass/_sections.scss */
-.flex-container p.flex-caption button:hover, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:hover:last-of-type {
+.flex-container p.flex-caption button:hover, .flex-container p.flex-caption .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .flex-container p.flex-caption a:hover:last-of-type, .flex-container p.flex-caption form .fbElementButton:hover, form .flex-container p.flex-caption .fbElementButton:hover {
   background: #b32a57;
 }
 
@@ -1397,7 +1400,7 @@ header a {
   }
 }
 /* line 506, ../sass/_sections.scss */
-.training .container button, .training .container .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .training .container a:last-of-type {
+.training .container button, .training .container .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .training .container a:last-of-type, .training .container form .fbElementButton, form .training .container .fbElementButton {
   background: transparent;
   padding: 15px 25px;
   border: 2px solid #fff;
@@ -1406,7 +1409,7 @@ header a {
   font-size: 16px;
 }
 /* line 513, ../sass/_sections.scss */
-.training .container button:hover, .training .container .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .training .container a:hover:last-of-type {
+.training .container button:hover, .training .container .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .training .container a:hover:last-of-type, .training .container form .fbElementButton:hover, form .training .container .fbElementButton:hover {
   background: rgba(3, 3, 5, 0.2);
 }
 
@@ -1793,7 +1796,7 @@ footer .copyright a {
   display: block;
 }
 /* line 125, ../sass/_pages.scss */
-.content button, .content .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .content a:last-of-type {
+.content button, .content .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .content a:last-of-type, .content form .fbElementButton, form .content .fbElementButton {
   text-align: center;
   background: #b32a57;
   font-family: "RobotoLight", sans-serif;
@@ -1802,16 +1805,61 @@ footer .copyright a {
 }
 @media (min-width: 1200px) {
   /* line 125, ../sass/_pages.scss */
-  .content button, .content .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .content a:last-of-type {
+  .content button, .content .news #displayBlogStory .blogPost .blogBody a:last-of-type, .news #displayBlogStory .blogPost .blogBody .content a:last-of-type, .content form .fbElementButton, form .content .fbElementButton {
     font-size: 20px;
   }
 }
 /* line 134, ../sass/_pages.scss */
-.content button:hover, .content .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .content a:hover:last-of-type {
+.content button:hover, .content .news #displayBlogStory .blogPost .blogBody a:hover:last-of-type, .news #displayBlogStory .blogPost .blogBody .content a:hover:last-of-type, .content form .fbElementButton:hover, form .content .fbElementButton:hover {
   background: #259474;
 }
 
-/* line 140, ../sass/_pages.scss */
+/* line 139, ../sass/_pages.scss */
+form {
+  padding: 30px 0;
+  max-width: 800px;
+}
+/* line 142, ../sass/_pages.scss */
+form label {
+  font-family: "RobotoRegular";
+  color: #333333;
+  padding: 16px 0px;
+  display: inline-block;
+  width: 100%;
+}
+@media (min-width: 1025px) {
+  /* line 142, ../sass/_pages.scss */
+  form label {
+    width: 50%;
+  }
+}
+/* line 152, ../sass/_pages.scss */
+form input {
+  width: 100%;
+}
+@media (min-width: 1025px) {
+  /* line 152, ../sass/_pages.scss */
+  form input {
+    width: 49%;
+  }
+}
+/* line 158, ../sass/_pages.scss */
+form .fbElementButton {
+  width: 240px;
+  margin-top: 30px;
+}
+@media (min-width: 1025px) {
+  /* line 158, ../sass/_pages.scss */
+  form .fbElementButton {
+    float: right;
+  }
+}
+/* line 166, ../sass/_pages.scss */
+form.paypal {
+  width: 325px;
+}
+
+/* line 171, ../sass/_pages.scss */
 .previewFrame .flex-container {
   height: 900px !important;
 }
